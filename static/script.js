@@ -46,3 +46,38 @@ function toggleTheme() {
         localStorage.setItem("theme", "dark");
     }
 }
+
+// new code
+// 
+// 
+// 
+function percent() {
+    try {
+        display.value = eval(display.value) / 100;
+        animateDisplay();
+    } catch (e) {   
+        display.value = "Error";
+        animateDisplay();
+    }
+}
+
+function squareRoot() {
+    try {
+        display.value = Math.sqrt(eval(display.value));
+        animateDisplay();
+    } catch (e) {
+        display.value = "Error";
+        animateDisplay();
+    }
+}
+
+function square() {
+    try {
+        let val = eval(display.value);
+        display.value = val * val;
+        animateDisplay();
+    } catch (e) {
+        display.value = "Error";
+        animateDisplay();
+    }
+}
