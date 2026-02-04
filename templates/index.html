@@ -5,8 +5,14 @@
     <title>Calculator v2</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="dark">
+
     <div class="calculator">
+        <div class="top-bar">
+            <span>Calculator</span>
+            <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+        </div>
+
         <input type="text" id="display" disabled>
 
         <div class="buttons">

@@ -10,6 +10,24 @@ body {
     margin: 0;
 }
 
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f9fafb;
+    margin-bottom: 10px;
+}
+
+#themeToggle {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+    box-shadow: none;
+}
+
+
 .calculator {
     background: #1f2937;
     padding: 20px;
@@ -81,4 +99,37 @@ button:active {
     50% { transform: scale(1.03); }
     100% { transform: scale(1); }
 }
+
+/* Light theme */
+body.light {
+    background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+}
+
+body.light .calculator {
+    background: #ffffff;
+}
+
+body.light #display {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+body.light button {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+body.light button:hover {
+    background: #d1d5db;
+}
+
+body.light .zero {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.light .top-bar {
+    color: #111827;
+}
+
 

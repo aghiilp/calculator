@@ -1,4 +1,13 @@
 let display = document.getElementById("display");
+let body = document.body;
+let toggleBtn = document.getElementById("themeToggle");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+    body.classList.remove("dark");
+    body.classList.add("light");
+    toggleBtn.textContent = "☀️";
+}
 
 function appendValue(value) {
     display.value += value;
@@ -20,6 +29,20 @@ function calculate() {
 
 function animateDisplay() {
     display.classList.remove("updated");
-    void display.offsetWidth; // trick to restart animation
+    void display.offsetWidth; // restart animation
     display.classList.add("updated");
+}
+
+function toggleTheme() {
+    if (body.classList.contains("dark")) {
+        body.classList.remove("dark");
+        body.classList.add("light");
+        toggleBtn.textContent = "☀️";
+        localStorage.setItem("theme", "light");
+    } else {
+        body.classList.remove("light");
+        body.classList.add("dark");
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("theme", "dark");
+    }
 }
