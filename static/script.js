@@ -47,10 +47,14 @@ function toggleTheme() {
     }
 }
 
+// 
+// 
+// 
 // new code
 // 
 // 
 // 
+
 function percent() {
     try {
         display.value = eval(display.value) / 100;
